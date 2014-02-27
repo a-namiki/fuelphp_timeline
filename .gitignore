@@ -1,0 +1,2 @@
+src/timeline/fuel/app/logs/*
+src/timeline/fuel/app/migrations/*.php
