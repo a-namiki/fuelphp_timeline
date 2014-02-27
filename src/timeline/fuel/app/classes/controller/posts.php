@@ -127,17 +127,17 @@ class Controller_Posts extends Controller_Template{
 	}
 
 
-	// public function action_view($id = null)
-	// {
-	// 	is_null($id) and Response::redirect('posts');
+	public function action_view($id = null)
+	{
+		is_null($id) and Response::redirect('posts');
 
-	// 	if ( ! $data['post'] = Model_Post::find($id))
-	// 	{
-	// 		Session::set_flash('error', 'Could not find post #'.$id);
-	// 		Response::redirect('posts');
-	// 	}
+		if ( ! $data['post'] = Model_Post::find($id))
+		{
+			Session::set_flash('error', 'Could not find post #'.$id);
+			Response::redirect('posts');
+		}
 
-	// 	$this->template->title = "Post";
-	// 	$this->template->content = View::forge('posts/view', $data);
-	// }
+		$this->template->title = "Post";
+		$this->template->content = View::forge('posts/view', $data);
+	}
 }
